@@ -1,11 +1,8 @@
-<aside class="warning">
-I am slowly migrating the existing, gnarly, research code and bringing it into
-this repo bit by bit. Documentation will keep pace.
-</aside>
-
 # Overview
 
 A repository to help compile OpenSceneGraph using WebAssembly and Empscripten.
+I am slowly migrating the existing, gnarly, research code and bringing it into
+this repo bit by bit. Documentation will keep pace.
 
 # Considerations
 
