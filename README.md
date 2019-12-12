@@ -16,13 +16,30 @@ A repository to help compile OpenSceneGraph using WebAssembly and Empscripten.
 
 # Setup
 
-You will need the [SDK](git clone https://github.com/emscripten-core/emsdk.git).
-Once downloaded, run:
+First you'll need to locally clone the EMSDK for this project.
 
 ```
+# git clone https://github.com/emscripten-core/emsdk.git
 # cd emsdk
 # ./emsdk install latest
 # ./emsdk activate latest
+# source emsdk_env.sh --build=Release
+```
+Second, using the same environment/shell from above, checkout OSG and run the
+special **emconfigure** command to invoke cmake.
+
+```
+# git clone https://github.com/AlphaPixel/OpenSceneGraph.git
+# cd OpenSceneGraph
+# emconfigure cmake . -DCMAKE_TOOLCHAIN_FILE=../emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake
+# make
 ```
 
-> TODO: Investigate local install, rather than system-wide.
+Notice how we define the toolchain file at the commandline, which is key to
+properly building OSG using Emscripten.
+
+# TODO
+
+- Make the emsdk and OpenSceneGraph folders use git **submodules**.
+
+- Investigate using a toplevel CMake configuration to automake the steps above.
