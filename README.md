@@ -1,6 +1,6 @@
 # Overview
 
-A repository to help compile OpenSceneGraph using WebAssembly and Empscripten.
+A repository to help compile OpenSceneGraph using WebAssembly and Emscripten.
 I am slowly migrating the existing, gnarly, research code and bringing it into
 this repo bit by bit. Documentation will keep pace.
 
